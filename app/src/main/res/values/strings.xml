@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="lab01">Lab01</string>
+    <string name="lab02">Lab02</string>
+    <string name="_6_x_6">6 x 6</string>
+    <string name="_4_x_4">4 x 4</string>
+    <string name="_4_x_3">4 x 3</string>
+    <string name="_3_x_2">3 x 2</string>
+</resources>

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.lab1.Lab01.Lab01Activity
+import com.example.lab1.Lab03.Lab03Activity
 import com.example.lab1.R
 
 class Lab02Activity : AppCompatActivity() {
@@ -26,8 +27,14 @@ class Lab02Activity : AppCompatActivity() {
     fun onLab02Click(v: View){
         val tag: String? = v.tag as String?
         val tokens: List<String>? = tag?.split(" ")
-        val rows = tokens?.get(0)?.toInt()
-        val columns = tokens?.get(1)?.toInt()
+        val rows = tokens?.get(0)?.toInt() ?: 0
+        val columns = tokens?.get(1)?.toInt() ?: 0
+
+        val intent = Intent(this, Lab03Activity::class.java)
+        intent.putExtra("columns", columns)
+        intent.putExtra("rows", rows)
+        startActivity(intent)
+
         Toast.makeText(this, "rows: ${rows}, columns: ${columns}", Toast.LENGTH_SHORT).show()
     }
 }

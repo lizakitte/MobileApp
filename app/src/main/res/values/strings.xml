@@ -7,4 +7,6 @@
     <string name="_4_x_3">4 x 3</string>
     <string name="_3_x_2">3 x 2</string>
     <string name="board_activity_menu_sound">Sound</string>
+    <string name="title_activity_lab06">Lab06Activity</string>
+    <string name="lab06">Lab06</string>
 </resources>

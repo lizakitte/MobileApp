@@ -53,7 +53,7 @@ fun AppTopBar(
                 }
             } else {
                 IconButton(onClick = {
-                    Lab06Activity.container.notificationHandler.showSimpleNotification()
+                    navController.navigate("preferences")
                 }) {
                     Icon(imageVector = Icons.Default.Settings, contentDescription = "")
                 }

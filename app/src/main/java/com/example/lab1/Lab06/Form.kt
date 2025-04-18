@@ -37,7 +37,8 @@ import kotlinx.coroutines.launch
 @Composable
 fun FormScreen(
     navController: NavController,
-    viewModel: FormViewModel = viewModel(factory = FormViewModelProvider.Factory)
+    viewModel: FormViewModel = viewModel(factory = FormViewModelProvider.Factory),
+    scheduleNotification: () -> Unit
 ) {
     val coroutineScope = rememberCoroutineScope()
 
@@ -52,6 +53,7 @@ fun FormScreen(
                     coroutineScope.launch {
                         viewModel.save()
                         navController.navigate("list")
+                        scheduleNotification()
                     }
                 }
             )
